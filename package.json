@@ -1,0 +1,46 @@
+{
+  "name": "parcel-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "aws": {
+    "bucket": "staging.interactives.politico.com",
+    "prefix": "path/to/project",
+    "cacheControl": "max-age=300, no-transform, public"
+  },
+  "scripts": {
+    "start": "npm-run-all parcel",
+    "start:api": "npm-run-all --parallel parcel api",
+    "publish:aws": "npm-run-all --serial build aws",
+    "api": "node bin/server.js",
+    "parcel": "parcel src/index.njk -p 3000",
+    "build": "parcel build src/index.njk --public-url ./ --out-dir dist",
+    "build:gitpage": "parcel build src/index.njk --public-url ./ --out-dir docs",
+    "aws": "node bin/s3.js"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.0.0",
+    "chalk": "^2.3.0",
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jquery": "^3.3.1",
+    "json-server": "^0.12.1",
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
+    "nunjucks": "^3.0.1",
+    "open": "^0.0.5",
+    "parcel-bundler": "*",
+    "parcel-plugin-nunjucks": "git://github.com/The-Politico/parcel-plugin-nunjucks.git",
+    "s3": "^4.4.0"
+  }
+}
