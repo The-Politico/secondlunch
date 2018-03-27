@@ -1,0 +1,88 @@
+{
+    "theme1": {
+        "name": "POLITICO Red",
+        "posterStyles": {
+            "backgroundColor": "#990000",
+            "color": "#f0f0f0",
+            "fontFamily": "din-2014",
+            "fontWeight": "bold",
+        },
+        "sourceStyles": {
+            "color": "#f0f0f0",
+            "fontFamily": "din-2014",
+        },
+        "iconClass": "icon-politico",
+        "iconColor": "#f0f0f0",
+    },
+    "theme2": {
+        "name": "POLITICO White",
+        "posterStyles": {
+            "backgroundColor": "#fff",
+            "color": "#000",
+            "fontFamily": "din-2014",
+            "fontWeight": "bold",
+        },
+        "sourceStyles": {
+            "color": "#000",
+            "fontFamily": "din-2014",
+        },
+        "iconClass": "icon-politico",
+        "iconColor": "#990000",
+    },
+    "theme5": {
+        "name": "POLITICO BFD",
+        "posterStyles": {
+            "backgroundColor": "rgb(28, 32, 49)",
+            "color": "rgba(255,255,255,0.85)",
+            "fontFamily": "din-2014",
+            "fontWeight": "bold",
+        },
+        "sourceStyles": {
+            "color": "rgba(255,255,255,0.85)",
+            "fontFamily": "din-2014",
+        },
+        "iconClass": "icon-politico",
+        "iconColor": "#dc0228",
+    },
+    "theme3": {
+        "name": "Pro",
+        "posterStyles": {
+            "backgroundColor": "rgb(28, 32, 49)",
+            "color": "rgba(255,255,255,0.85)",
+            "fontFamily": "din-2014",
+            "fontWeight": "bold",
+        },
+        "sourceStyles": {
+            "color": "rgba(255,255,255,0.85)",
+            "fontFamily": "din-2014",
+        },
+        "iconClass": "icon-politico",
+        "iconColor": "#dc0228",
+        "extraIconClass": "icon-pro-small",
+        "extraIconColor": "rgba(255,255,255,0.85)",
+    },
+    "theme4": {
+        "name": "Magazine",
+        "posterStyles": {
+            "backgroundColor": "rgb(28, 32, 49)",
+            "color": "rgba(255,255,255,0.85)",
+            "fontFamily": "jubilat",
+            "fontWeight": "bold",
+            "letterSpacing": "0.03em",
+        },
+        "sourceStyles": {
+            "color": "rgba(255,255,255,0.85)",
+            "fontFamily": "georgia"
+        },
+        "attributionStyles": {
+            "fontFamily": "georgia",
+        },
+        "leftQuoteStyles": {
+            "marginLeft": "-0.57em",
+        },
+        "iconClass": "icon-politico",
+        "iconColor": "#dc0228",
+        "extraIconClass": "icon-magazine-small",
+        "extraIconColor": "#f0f0f0",
+    }
+}

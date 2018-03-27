@@ -1,1 +1,239 @@
-@import 'bootstrap';
+@import "bootstrap";
+@import "variables";
+
+html {
+  min-width: 680px;
+}
+
+body {
+  min-width: 680px;
+  background-color: #eee;
+}
+
+canvas {
+  display: none;
+}
+
+.content {
+  display: table;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 640px;
+  margin: 0 auto;
+
+  .poster-wrapper,
+  .container {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .poster-wrapper {
+    width: 640px;
+  }
+}
+
+.controls-wrapper {
+  padding-top: $line-height-computed;
+
+  small {
+    font-size: 100%;
+    opacity: 0.5;
+  }
+
+  .btn {
+    background-color: $gray-light;
+    border-color: darken($gray-light, 10%);
+
+    &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active {
+      background-color: $gray;
+      border-color: darken($gray, 10%);
+      outline: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .btn-group,
+  .btn-group + .btn {
+    margin-right: $grid-gutter-width / 2;
+  }
+
+  .btn-group-vertical .btn {
+    text-align: left;
+  }
+
+  .form-group,
+  .btn-group {
+    margin-bottom: $line-height-computed / 2;
+  }
+
+  label {
+    display: block;
+    font-weight: normal;
+  }
+}
+
+.poster {
+  height: 640px;
+  width: 640px;
+  margin: $line-height;
+  position: relative;
+  padding: $padding * 2;
+  font-size: $base-font-size * 5;
+  line-height: 1 !important;
+  overflow: hidden;
+
+  &.quote {
+    .left-quote {
+      content:$quote-begin-symbol;
+      display: block;
+      position: absolute;
+      top: $padding * 2;
+      left: $padding * 2;
+      margin-left: $quote-mark-margin;
+    }
+    &.sixteen-by-nine {   
+      .left-quote {
+        top: $padding * 1.5;
+        left: $padding * 1.5;
+      }
+    }
+  }
+
+  .left-quote,
+  .right-quote {
+    display: none;
+  }
+
+  blockquote {
+    padding: 0;
+    margin: 0 0 $line-height * 2;
+    border-left: none;
+    font-size: inherit;
+    line-height: 100%;
+    display: block;
+    font-feature-settings: "liga" 0;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+
+    p {
+      font-size: inherit;
+      font-weight: inherit;
+      margin: 0;
+      line-height: 110%;
+
+      span {
+        line-height: inherit !important;
+      }
+    }
+
+    &:last-child {
+      color: red;
+    }
+
+    .show-credit {
+      line-height: 1.2 !important;
+    }
+  }
+
+  p.source {
+    font-size: $base-font-size * 1.5;
+    font-weight: normal;
+    line-height: 1.3;
+    display: block;
+    margin-top: 0;
+  }
+
+  .show-credit {
+    display: block;
+    // text-transform: uppercase;
+    font-weight: normal;
+    font-size: $base-font-size * 1.2;
+  }
+
+  p.source,
+  .show-credit {
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  .logo-wrapper {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    bottom: 0;
+    right: $padding / 2;
+    text-align: right;
+    padding:  $padding $padding $padding * 2;
+    margin: 0;
+    font-size: 28px;
+  }
+
+  &.sixteen-by-nine {
+    height: 360px;
+    padding: $padding * 1.5;
+
+    .logo-wrapper {
+      padding: $padding ;
+      font-size: 20px;
+    }
+
+    blockquote {
+        margin-bottom: 20px;
+    }
+
+    p.source {
+        font-size: $base-font-size * 1.3;
+    }
+
+    .show-credit {
+        font-size: $base-font-size * 1.1;
+    }
+  }
+}
+
+
+.quote {
+  blockquote p:last-child:after {
+    content: $quote-end-symbol;
+  }
+}
+
+.menu > * {
+  display: inline-block;
+}
+
+.menu > * + * {
+  margin-left: 15px;
+}
+
+.hover-menu {
+  padding: 8px 7px 6px;
+  position: absolute;
+  z-index: 1;
+  top: -10000px;
+  left: -10000px;
+  margin-top: -6px;
+  opacity: 0;
+  background-color: #222;
+  border-radius: 4px;
+  transition: opacity 0.75s;
+}
+
+.hover-menu .button {
+  color: #ccc;
+  font-family: Georgia;
+  font-style: italic;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.hover-menu .button[data-active='true'] {
+  color: #fff;
+}
