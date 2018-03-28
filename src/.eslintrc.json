@@ -7,7 +7,8 @@
   "rules": {
     "no-console": 0,
     "comma-dangle": ["error", "always"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "react/prop-types": false
   },
   "extends": ["standard", "standard-react"]
 }

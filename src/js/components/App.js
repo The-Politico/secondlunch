@@ -18,13 +18,7 @@ class App extends React.Component {
   }
 
   updateState (downstream) {
-    this.setState({
-      fontSize: downstream.fontSize,
-      theme: downstream.theme,
-      aspectRatio: downstream.aspectRatio,
-      quotes: downstream.quotes,
-      attribution: downstream.attribution,
-    });
+    this.setState(downstream);
   }
 
   render () {

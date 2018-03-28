@@ -1,88 +1,24 @@
 import React from 'react';
-import {Editor,} from 'slate-react';
-import Menu from './Menu';
+import Quote from './poster/quote';
+import Source from './poster/source';
+import Attribution from './poster/attribution';
 import Plain from 'slate-plain-serializer';
-import AutoReplace from 'slate-auto-replace';
 import quotes from '../quotes.json';
 import themes from '../themes.json';
 import assign from 'lodash/assign';
-
-const starter = quotes[Math.floor(Math.random() * quotes.length)];
-const plugins = [
-  AutoReplace({
-    trigger: /(")/,
-    before: /\s$/,
-    transform: (transform, event, matches) => {
-      return transform.insertText('“'); // smart double quote (left)
-    },
-  }),
-  AutoReplace({
-    trigger: /(")/,
-    before: /\S$/,
-    transform: (transform, event, matches) => {
-      return transform.insertText('\u201d'); // smart double quote (right)
-    },
-  }),
-  AutoReplace({
-    trigger: /(')/,
-    before: /\s$/,
-    transform: (transform, event, matches) => {
-      return transform.insertText('\u2018'); // smart single quote (left)
-    },
-  }),
-  AutoReplace({
-    trigger: /(')/,
-    before: /\S$/,
-    transform: (transform, event, matches) => {
-      return transform.insertText('\u2019'); // smart single quote (right)
-    },
-  }),
-];
-
-const renderQuote = (props) => {
-  const { node, attributes, children } = props;
-
-  return (
-    <p {...attributes}>{children}</p>
-  );
-};
-
-const renderSource = (props) => {
-  const { node, attributes, children } = props;
-  return (
-    <p className='source' {...attributes}>
-      {children[0].props.block ? '\u2014' : null} {children}
-    </p>
-  );
-};
-
-const renderAttribution = (props) => {
-  const { node, attributes, children } = props;
-  return (
-    <p className='show-credit' {...attributes}>
-      {children}
-    </p>
-  );
-};
-
-const renderMark = (props) => {
-  const { children, mark } = props;
-  console.log(mark.type);
-  switch (mark.type) {
-    case 'italic':
-      return <em>{children}</em>;
-  }
-};
+import plugins from '../slate-plugins';
 
 class Poster extends React.Component {
   constructor (props) {
     super(props);
 
+    const starter = quotes[Math.floor(Math.random() * quotes.length)];
     this.state = {
       quote: Plain.deserialize(starter.quote),
       source: Plain.deserialize(starter.source),
       attribution: Plain.deserialize(''),
     };
+
     this.onQuoteChange = this.onQuoteChange.bind(this);
     this.onSourceChange = this.onSourceChange.bind(this);
     this.onAttributionChange = this.onAttributionChange.bind(this);
@@ -145,48 +81,40 @@ class Poster extends React.Component {
   render () {
     const theme = themes[this.props.theme];
     const posterStyles = assign(
-      {}, theme.posterStyles, {fontSize: this.props.fontSize}
+      {}, theme.posterStyles, { fontSize: this.props.fontSize, }
     );
 
     return (
       <div className='poster-wrapper'>
         <div
-          className={`poster ${this.props.aspectRatio} ${this.props.quotes ? 'quote' : null}`}
+          className={`poster ${this.props.aspectRatio} ${this.props.quotes ? 'quote' : ''}`}
           style={posterStyles}
         >
-          <span className='left-quote' style={theme.leftQuoteStyles}>&ldquo;</span>
-          <blockquote>
-            <Editor
-              value={this.state.quote}
-              onChange={this.onQuoteChange}
-              placeholder='Enter quote here'
-              plugins={plugins}
-              renderNode={renderQuote}
-            />
-          </blockquote>
-          <Editor
+          <span
+            className='left-quote'
+            style={theme.leftQuoteStyles}
+          >
+            &ldquo;
+          </span>
+          <Quote
+            value={this.state.quote}
+            onChange={this.onQuoteChange}
+            plugins={plugins}
+          />
+          <Source
             value={this.state.source}
             onChange={this.onSourceChange}
-            renderNode={renderSource}
-            placeholder='Enter source here (optional)'
-            style={theme.sourceStyles}
+            plugins={plugins}
+            styles={theme.sourceStyles}
           />
-          <div className='attribution'>
-            <Menu
-              menuRef={this.menuRef}
-              value={this.state.attribution}
-              onChange={this.onAttributionChange}
-            />
-            <Editor
-              value={this.state.attribution}
-              onChange={this.onAttributionChange}
-              renderNode={renderAttribution}
-              renderMark={renderMark}
-              placeholder='Enter attribution here (optional)'
-              style={assign({}, theme.attributionStyles, {opacity: 0.6,})}
-            />
-          </div>
-          <b className='logo-wrapper'>
+          <Attribution
+            value={this.state.attribution}
+            onChange={this.onAttributionChange}
+            plugins={plugins}
+            styles={assign({}, theme.attributionStyles, { opacity: 0.6, })}
+            menuRef={this.menuRef}
+          />
+          <div className='logo-wrapper'>
             <b
               className={`icon ${theme.iconClass}`}
               style={{
@@ -202,7 +130,7 @@ class Poster extends React.Component {
                 }}
               />
             ) : null}
-          </b>
+          </div>
         </div>
       </div>
     );
