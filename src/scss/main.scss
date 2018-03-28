@@ -11,17 +11,31 @@ body {
 }
 
 .header-container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 0 $padding;
 
   h1 {
     font-family: 'din-2014';
     font-size: 48px;
+    max-width: 640px;
+    line-height: 0.6;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-family: 'din-2014';
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $gray-light;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
   p {
     font-family: 'franklin-gothic-urw';
     font-size: 20px;
+    max-width: 640px;
   }
 }
 
@@ -55,6 +69,7 @@ canvas {
     color: black;
     border-color: darken(#ccc, 10%);
     min-width: 90px;
+    font-family: 'franklin-gothic-urw';
 
     &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active {
       background-color: $gray;
@@ -73,6 +88,7 @@ canvas {
 
   .Dropdown-menu, .Dropdown-control {
     max-width: 182px;
+    font-family: 'franklin-gothic-urw';
   }
 
   .Dropdown-control {
@@ -96,7 +112,7 @@ canvas {
     font-weight: bold;
     font-family: 'din-2014';
     text-transform: uppercase;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.17rem;
   }
 }
 
@@ -115,13 +131,13 @@ canvas {
       content:$quote-begin-symbol;
       display: block;
       position: absolute;
-      top: $padding * 2;
+      top: $padding * 2.05;
       left: $padding * 2;
       margin-left: $quote-mark-margin;
     }
     &.sixteen-by-nine {   
       .left-quote {
-        top: $padding * 1.5;
+        top: $padding * 1.55;
         left: $padding * 1.5;
       }
     }
