@@ -1,6 +1,6 @@
-import Core from './core';
-import Mag from './mag';
-import Pro from './pro';
+import Core from './Core';
+import Mag from './Mag';
+import Pro from './Pro';
 
 const branding = {
   Core,

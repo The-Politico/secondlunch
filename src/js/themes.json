@@ -1,33 +1,31 @@
 {
     "POLITICO Red": {
         "branding": "Core",
-        "group": "Core",
         "brandStyles": {
-            "color": "#f0f0f0",
+            "color": "#f4f5f7",
         },
         "posterStyles": {
-            "backgroundColor": "#990000",
+            "backgroundColor": "#AC001E",
         },
         "quoteStyles": {
-            "color": "#f0f0f0",
+            "color": "#f4f5f7",
             "fontFamily": "din-2014",
             "fontWeight": "bold",
         },
         "sourceStyles": {
-            "color": "#f0f0f0",
+            "color": "#f4f5f7",
             "fontFamily": "din-2014",
         },
         "leftQuoteStyles": {
-            "color": "#f0f0f0",
+            "color": "#f4f5f7",
             "fontFamily": "din-2014",
             "fontWeight": "bold",
         },
     },
     "POLITICO White": {
         "branding": "Core",
-        "group": "Core",
         "brandStyles": {
-            "color": "#990000",
+            "color": "#dc0228",
         },
         "posterStyles": {
             "backgroundColor": "#fff",
@@ -49,7 +47,6 @@
     },
     "POLITICO BFD": {
         "branding": "Core",
-        "group": "Core",
         "brandStyles": {
             "color": "#dc0228",
         },
@@ -73,7 +70,6 @@
     },
     "Pro": {
         "branding": "Pro",
-        "group": "Pro",
         "brandStyles": {
             "color": "#dc0228",
         },
@@ -97,7 +93,6 @@
     },
     "Magazine": {
         "branding": "Mag",
-        "group": "Mag",
         "brandStyles": {
             "color": "#dc0228",
         },

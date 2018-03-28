@@ -2,7 +2,7 @@ import React from 'react';
 
 const Pro = (props) => {
   return (
-    <div className='logo-wrapper' style={props.styles}>
+    <div className='multi-icon'>
       <b className='icon icon-politico' />
       &nbsp;
       <b className='icon icon-pro-small' style={{

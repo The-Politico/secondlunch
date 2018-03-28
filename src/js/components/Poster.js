@@ -117,7 +117,9 @@ class Poster extends React.Component {
             styles={assign({}, theme.attributionStyles, theme.sourceStyles, { opacity: 0.6, })}
             menuRef={this.menuRef}
           />
-          <Brand styles={theme.brandStyles} />
+          <div className='logo-wrapper' style={theme.brandStyles}>
+            <Brand />
+          </div>
         </div>
       </div>
     );

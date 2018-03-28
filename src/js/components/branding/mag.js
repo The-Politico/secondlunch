@@ -2,7 +2,7 @@ import React from 'react';
 
 const Mag = (props) => {
   return (
-    <div className='logo-wrapper' style={props.styles}>
+    <div className='multi-icon'>
       <b className='icon icon-politico' />
       &nbsp;
       <b className='icon icon-magazine-small' style={{
