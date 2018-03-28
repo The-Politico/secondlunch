@@ -10,9 +10,18 @@ body {
   background-color: #f0f0f0;
 }
 
+header {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
+  b {
+      color: #9e0000;
+  }
+}
+
 .header-container {
   max-width: 1200px;
-  margin: 20px auto 0;
+  margin: 80px auto 0;
   padding: 0 $padding;
 
   h1 {
@@ -26,10 +35,10 @@ body {
   h4 {
     font-family: 'din-2014';
     text-transform: uppercase;
-    font-weight: bold;
-    color: $gray-light;
-    font-size: 20px;
     margin-bottom: 20px;
+    font-weight: 500;
+    color: #999;
+    font-size: 18px;
   }
 
   p {
