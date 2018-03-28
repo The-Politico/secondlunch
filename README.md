@@ -16,7 +16,41 @@ Then, you can customize your themes in `src/js/themes.json`. Each object in JSON
 
 1. The key to the object is the name of the theme. This will display in the theme selection dropdown.
 2. Each of the nested "styles" objects lets you write any CSS property to override the defaults of a particular piece of the card. For example `quoteStyles` lets you override the quote on the page, while `sourceStyles` lets you override the source line.
-3. Set the branding to the name of the brand React component the theme should use. Read more about this [below](#branding).
+3. Set `branding` to the name of the brand React component the theme should use. Read more about this [below](#branding).
+
+Here is an example theme:
+
+```
+"Magazine": {
+    "branding": "Mag",
+    "brandStyles": {
+        "color": "#dc0228",
+    },
+    "posterStyles": {
+        "backgroundColor": "rgb(28, 32, 49)",
+    },
+    "quoteStyles": {
+        "color": "rgba(255,255,255,0.85)",
+        "fontFamily": "jubilat",
+        "fontWeight": "bold",
+        "letterSpacing": "0.03em",
+    },
+    "sourceStyles": {
+        "color": "rgba(255,255,255,0.85)",
+        "fontFamily": "georgia"
+    },
+    "attributionStyles": {
+        "fontFamily": "georgia",
+    },
+    "leftQuoteStyles": {
+        "marginLeft": "-0.57em",
+        "color": "rgba(255,255,255,0.85)",
+        "fontFamily": "jubilat",
+        "fontWeight": "bold",
+        "letterSpacing": "0.03em",
+    },
+}
+```
 
 #### Branding
 
