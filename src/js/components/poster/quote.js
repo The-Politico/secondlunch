@@ -11,7 +11,7 @@ const renderQuote = (props) => {
 
 const Quote = (props) => {
   return (
-    <blockquote>
+    <blockquote style={props.styles}>
       <Editor
         value={props.value}
         onChange={props.onChange}

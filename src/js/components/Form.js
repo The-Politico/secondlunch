@@ -11,7 +11,7 @@ class Form extends React.Component {
 
     this.state = {
       fontSize: 45,
-      theme: 'theme1',
+      theme: 'core-red',
       aspectRatio: 'sixteen-by-nine',
       quotes: true,
       attribution: '',

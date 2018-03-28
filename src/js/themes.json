@@ -1,8 +1,14 @@
 {
-    "theme1": {
+    "core-red": {
         "name": "POLITICO Red",
+        "branding": "Core",
+        "brandStyles": {
+            "color": "#f0f0f0",
+        },
         "posterStyles": {
             "backgroundColor": "#990000",
+        },
+        "quoteStyles": {
             "color": "#f0f0f0",
             "fontFamily": "din-2014",
             "fontWeight": "bold",
@@ -11,13 +17,22 @@
             "color": "#f0f0f0",
             "fontFamily": "din-2014",
         },
-        "iconClass": "icon-politico",
-        "iconColor": "#f0f0f0",
+        "leftQuoteStyles": {
+            "color": "#f0f0f0",
+            "fontFamily": "din-2014",
+            "fontWeight": "bold",
+        },
     },
-    "theme2": {
+    "core-white": {
         "name": "POLITICO White",
+        "branding": "Core",
+        "brandStyles": {
+            "color": "#990000",
+        },
         "posterStyles": {
             "backgroundColor": "#fff",
+        },
+        "quoteStyles": {
             "color": "#000",
             "fontFamily": "din-2014",
             "fontWeight": "bold",
@@ -26,13 +41,22 @@
             "color": "#000",
             "fontFamily": "din-2014",
         },
-        "iconClass": "icon-politico",
-        "iconColor": "#990000",
+        "leftQuoteStyles": {
+            "color": "#000",
+            "fontFamily": "din-2014",
+            "fontWeight": "bold",
+        },
     },
-    "theme5": {
+    "core-bfd": {
         "name": "POLITICO BFD",
+        "branding": "Core",
+        "brandStyles": {
+            "color": "#dc0228",
+        },
         "posterStyles": {
             "backgroundColor": "rgb(28, 32, 49)",
+        },
+        "quoteStyles": {
             "color": "rgba(255,255,255,0.85)",
             "fontFamily": "din-2014",
             "fontWeight": "bold",
@@ -41,13 +65,22 @@
             "color": "rgba(255,255,255,0.85)",
             "fontFamily": "din-2014",
         },
-        "iconClass": "icon-politico",
-        "iconColor": "#dc0228",
+        "leftQuoteStyles": {
+            "color": "rgba(255,255,255,0.85)",
+            "fontFamily": "din-2014",
+            "fontWeight": "bold",
+        },
     },
-    "theme3": {
+    "pro": {
         "name": "Pro",
+        "branding": "Pro",
+        "brandStyles": {
+            "color": "#dc0228",
+        },
         "posterStyles": {
             "backgroundColor": "rgb(28, 32, 49)",
+        },
+        "quoteStyles": {
             "color": "rgba(255,255,255,0.85)",
             "fontFamily": "din-2014",
             "fontWeight": "bold",
@@ -56,15 +89,22 @@
             "color": "rgba(255,255,255,0.85)",
             "fontFamily": "din-2014",
         },
-        "iconClass": "icon-politico",
-        "iconColor": "#dc0228",
-        "extraIconClass": "icon-pro-small",
-        "extraIconColor": "rgba(255,255,255,0.85)",
+        "leftQuoteStyles": {
+            "color": "rgba(255,255,255,0.85)",
+            "fontFamily": "din-2014",
+            "fontWeight": "bold",
+        },
     },
-    "theme4": {
+    "mag": {
         "name": "Magazine",
+        "branding": "Mag",
+        "brandStyles": {
+            "color": "#dc0228",
+        },
         "posterStyles": {
             "backgroundColor": "rgb(28, 32, 49)",
+        },
+        "quoteStyles": {
             "color": "rgba(255,255,255,0.85)",
             "fontFamily": "jubilat",
             "fontWeight": "bold",
@@ -79,10 +119,10 @@
         },
         "leftQuoteStyles": {
             "marginLeft": "-0.57em",
+            "color": "rgba(255,255,255,0.85)",
+            "fontFamily": "jubilat",
+            "fontWeight": "bold",
+            "letterSpacing": "0.03em",
         },
-        "iconClass": "icon-politico",
-        "iconColor": "#dc0228",
-        "extraIconClass": "icon-magazine-small",
-        "extraIconColor": "#f0f0f0",
     }
 }

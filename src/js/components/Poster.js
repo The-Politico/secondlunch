@@ -7,6 +7,7 @@ import quotes from '../quotes.json';
 import themes from '../themes.json';
 import assign from 'lodash/assign';
 import plugins from '../slate-plugins';
+import branding from './branding';
 
 class Poster extends React.Component {
   constructor (props) {
@@ -83,6 +84,7 @@ class Poster extends React.Component {
     const posterStyles = assign(
       {}, theme.posterStyles, { fontSize: this.props.fontSize, }
     );
+    const Brand = branding[theme.branding];
 
     return (
       <div className='poster-wrapper'>
@@ -100,6 +102,7 @@ class Poster extends React.Component {
             value={this.state.quote}
             onChange={this.onQuoteChange}
             plugins={plugins}
+            styles={theme.quoteStyles}
           />
           <Source
             value={this.state.source}
@@ -111,26 +114,10 @@ class Poster extends React.Component {
             value={this.state.attribution}
             onChange={this.onAttributionChange}
             plugins={plugins}
-            styles={assign({}, theme.attributionStyles, { opacity: 0.6, })}
+            styles={assign({}, theme.attributionStyles, theme.sourceStyles, { opacity: 0.6, })}
             menuRef={this.menuRef}
           />
-          <div className='logo-wrapper'>
-            <b
-              className={`icon ${theme.iconClass}`}
-              style={{
-                color: theme.iconColor,
-              }}
-            />
-            &nbsp;
-            {theme.extraIconClass ? (
-              <b
-                className={`icon ${theme.extraIconClass}`}
-                style={{
-                  color: theme.extraIconColor,
-                }}
-              />
-            ) : null}
-          </div>
+          <Brand styles={theme.brandStyles} />
         </div>
       </div>
     );
