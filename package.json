@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "aws": {
-    "bucket": "staging.interactives.politico.com",
-    "prefix": "path/to/project",
+    "bucket": "tools.interactives.politico.com",
+    "prefix": "secondlunch",
     "cacheControl": "max-age=300, no-transform, public"
   },
   "scripts": {

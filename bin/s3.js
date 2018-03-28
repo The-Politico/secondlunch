@@ -14,7 +14,7 @@ const params = {
   s3Params: {
     Bucket: awsSettings.bucket,
     Prefix: awsSettings.prefix,
-    ACL: "public-read",
+    ACL: "private",
     CacheControl: awsSettings.cacheControl,
   },
 };
