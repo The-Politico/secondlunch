@@ -75,6 +75,7 @@ canvas {
       background-color: $gray;
       border-color: darken($gray, 10%);
       outline: none;
+      z-index: 0;
       &:focus {
         box-shadow: none;
       }
