@@ -1,7 +1,7 @@
 {
-    "core-red": {
-        "name": "POLITICO Red",
+    "POLITICO Red": {
         "branding": "Core",
+        "group": "Core",
         "brandStyles": {
             "color": "#f0f0f0",
         },
@@ -23,9 +23,9 @@
             "fontWeight": "bold",
         },
     },
-    "core-white": {
-        "name": "POLITICO White",
+    "POLITICO White": {
         "branding": "Core",
+        "group": "Core",
         "brandStyles": {
             "color": "#990000",
         },
@@ -47,9 +47,9 @@
             "fontWeight": "bold",
         },
     },
-    "core-bfd": {
-        "name": "POLITICO BFD",
+    "POLITICO BFD": {
         "branding": "Core",
+        "group": "Core",
         "brandStyles": {
             "color": "#dc0228",
         },
@@ -71,9 +71,9 @@
             "fontWeight": "bold",
         },
     },
-    "pro": {
-        "name": "Pro",
+    "Pro": {
         "branding": "Pro",
+        "group": "Pro",
         "brandStyles": {
             "color": "#dc0228",
         },
@@ -95,9 +95,9 @@
             "fontWeight": "bold",
         },
     },
-    "mag": {
-        "name": "Magazine",
+    "Magazine": {
         "branding": "Mag",
+        "group": "Mag",
         "brandStyles": {
             "color": "#dc0228",
         },

@@ -10,8 +10,8 @@ class Form extends React.Component {
     super(props);
 
     this.state = {
-      fontSize: 45,
-      theme: 'core-red',
+      fontSize: 40,
+      theme: 'POLITICO Red',
       aspectRatio: 'sixteen-by-nine',
       quotes: true,
       attribution: '',
@@ -31,8 +31,8 @@ class Form extends React.Component {
     this.sendUpstream();
   }
 
-  onThemeButtonClick (e) {
-    this.setState({ theme: e.target.id, });
+  onThemeButtonClick ({ value, label, }) {
+    this.setState({ theme: value, });
     this.sendUpstream();
   }
 

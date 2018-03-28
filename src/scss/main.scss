@@ -35,14 +35,10 @@ canvas {
 .controls-wrapper {
   padding-top: $line-height-computed;
 
-  small {
-    font-size: 100%;
-    opacity: 0.5;
-  }
-
   .btn {
     background-color: $gray-light;
     border-color: darken($gray-light, 10%);
+    min-width: 90px;
 
     &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active {
       background-color: $gray;
@@ -59,18 +55,32 @@ canvas {
     margin-right: $grid-gutter-width / 2;
   }
 
-  .btn-group-vertical .btn {
-    text-align: left;
+  .Dropdown-menu, .Dropdown-control {
+    max-width: 182px;
   }
 
-  .form-group,
-  .btn-group {
-    margin-bottom: $line-height-computed / 2;
+  .Dropdown-control {
+    background-color: $gray-light;
+    color: white;
+    border-color: darken($gray-light, 10%);
+    border-radius: 5px;
+
+    .Dropdown-arrow {
+      border-color: white transparent transparent;
+      top: 18px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 18px;
   }
 
   label {
     display: block;
-    font-weight: normal;
+    font-weight: bold;
+    font-family: 'din-2014';
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
   }
 }
 

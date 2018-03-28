@@ -7,8 +7,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      fontSize: 45,
-      theme: 'core-red',
+      fontSize: 40,
+      theme: 'POLITICO Red',
       aspectRatio: 'sixteen-by-nine',
       quotes: 'true',
       attribution: '',

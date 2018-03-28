@@ -29,6 +29,7 @@
     "mu-forms": "^1.0.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-dropdown": "^1.4.0",
     "slate": "^0.33.3",
     "slate-auto-replace": "^0.9.0",
     "slate-plain-serializer": "^0.5.9",
