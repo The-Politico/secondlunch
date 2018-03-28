@@ -1,5 +1,7 @@
 # Second Lunch
 
+![Quotable example](example/quotable.png)
+
 ### What's in here?
 
 Second Lunch is a set of tools used to create shareable social media cards. Currently, it only contains Quotable, a tool for creating quote cards.
