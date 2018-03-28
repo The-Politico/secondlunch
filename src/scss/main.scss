@@ -280,3 +280,7 @@ canvas {
 .hover-menu .button[data-active='true'] {
   color: #fff;
 }
+
+span[contenteditable='false'] {
+  opacity: 0.6 !important;
+}
