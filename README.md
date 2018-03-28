@@ -1,6 +1,6 @@
 # Second Lunch
 
-![Quotable example](example/quotable.png)
+![Quotable example](example/quotable-16x9.png)
 
 ### What's in here?
 
