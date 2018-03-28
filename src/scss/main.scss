@@ -7,7 +7,22 @@ html {
 
 body {
   min-width: 680px;
-  background-color: #eee;
+  background-color: #f0f0f0;
+}
+
+.header-container {
+  max-width: 800px;
+  margin: 0 auto;
+
+  h1 {
+    font-family: 'din-2014';
+    font-size: 48px;
+  }
+
+  p {
+    font-family: 'franklin-gothic-urw';
+    font-size: 20px;
+  }
 }
 
 canvas {
@@ -36,8 +51,9 @@ canvas {
   padding-top: $line-height-computed;
 
   .btn {
-    background-color: $gray-light;
-    border-color: darken($gray-light, 10%);
+    background-color: #ccc;
+    color: black;
+    border-color: darken(#ccc, 10%);
     min-width: 90px;
 
     &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active {
@@ -60,13 +76,13 @@ canvas {
   }
 
   .Dropdown-control {
-    background-color: $gray-light;
-    color: white;
-    border-color: darken($gray-light, 10%);
+    background-color: #ccc;
+    color: black;
+    border-color: darken(#ccc, 10%);
     border-radius: 5px;
 
     .Dropdown-arrow {
-      border-color: white transparent transparent;
+      border-color: black transparent transparent;
       top: 18px;
     }
   }
