@@ -15,7 +15,7 @@ header {
   background-color: #ffffff;
   border-bottom: 1px solid #cccccc;
   b {
-      color: #9e0000;
+    color: #9e0000;
   }
 }
 
@@ -135,6 +135,7 @@ canvas {
   font-size: $base-font-size * 5;
   line-height: 1 !important;
   overflow: hidden;
+  font-feature-settings: "liga" 0;
 
   &.quote {
     .left-quote {
