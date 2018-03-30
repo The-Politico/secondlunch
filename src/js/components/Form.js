@@ -73,10 +73,12 @@ class Form extends React.Component {
 
     const poster = document.querySelector('.poster');
     const placeholders = poster
-      .querySelector('span[contenteditable="false"]');
+      .querySelectorAll('span[contenteditable="false"]');
 
-    if (placeholders) {
-      placeholders.style.visibility = 'hidden';
+    if (placeholders.length > 0) {
+      for (var i = 0; i < placeholders.length; i++) {
+        placeholders[i].style.visibility = 'hidden';
+      }
     }
 
     html2canvas(poster).then(this.saveImage);
@@ -101,10 +103,12 @@ class Form extends React.Component {
 
     const poster = document.querySelector('.poster');
     const placeholders = poster
-      .querySelector('span[contenteditable="false"]');
+      .querySelectorAll('span[contenteditable="false"]');
 
-    if (placeholders) {
-      placeholders.style.visibility = 'visible';
+    if (placeholders.length > 0) {
+      for (var i = 0; i < placeholders.length; i++) {
+        placeholders[i].style.visibility = 'visible';
+      }
     }
   }
 

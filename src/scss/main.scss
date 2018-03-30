@@ -253,7 +253,7 @@ canvas {
 
 
 .quote {
-  blockquote p:last-child:after {
+  blockquote:not(.empty) p:last-child:after {
     content: $quote-end-symbol;
   }
 }

@@ -113,7 +113,7 @@
             "fontFamily": "georgia",
         },
         "leftQuoteStyles": {
-            "marginLeft": "-0.57em",
+            "marginLeft": "-0.53em",
             "color": "rgba(255,255,255,0.85)",
             "fontFamily": "jubilat",
             "fontWeight": "bold",

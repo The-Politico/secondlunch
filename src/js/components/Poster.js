@@ -3,7 +3,7 @@ import Quote from './poster/quote';
 import Source from './poster/source';
 import Attribution from './poster/attribution';
 import Plain from 'slate-plain-serializer';
-import quotes from '../quotes.json';
+// import quotes from '../quotes.json';
 import themes from '../themes.json';
 import assign from 'lodash/assign';
 import plugins from '../slate-plugins';
@@ -13,10 +13,10 @@ class Poster extends React.Component {
   constructor (props) {
     super(props);
 
-    const starter = quotes[Math.floor(Math.random() * quotes.length)];
+    // const starter = quotes[Math.floor(Math.random() * quotes.length)];
     this.state = {
-      quote: Plain.deserialize(starter.quote),
-      source: Plain.deserialize(starter.source),
+      quote: Plain.deserialize(''),
+      source: Plain.deserialize(''),
       attribution: Plain.deserialize(''),
     };
 
@@ -92,12 +92,10 @@ class Poster extends React.Component {
           className={`poster ${this.props.aspectRatio} ${this.props.quotes ? 'quote' : ''}`}
           style={posterStyles}
         >
-          <span
+          {this.state.quote.startText.text ? (<span
             className='left-quote'
             style={theme.leftQuoteStyles}
-          >
-            &ldquo;
-          </span>
+          >&ldquo;</span>) : null}
           <Quote
             value={this.state.quote}
             onChange={this.onQuoteChange}

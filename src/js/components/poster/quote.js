@@ -10,8 +10,13 @@ const renderQuote = (props) => {
 };
 
 const Quote = (props) => {
+  let classes = '';
+  if (props.value.startText.text.length <= 0) {
+    classes = 'empty';
+  }
+
   return (
-    <blockquote style={props.styles}>
+    <blockquote className={classes} style={props.styles}>
       <Editor
         value={props.value}
         onChange={props.onChange}

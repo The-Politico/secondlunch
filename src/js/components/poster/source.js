@@ -5,7 +5,7 @@ const renderSource = (props) => {
   const { attributes, children, } = props;
   return (
     <p className='source' {...attributes}>
-      {children[0].props.block ? '\u2014' : null} {children}
+      {children[0].props.block ? '\u2014 ' : null}{children}
     </p>
   );
 };
