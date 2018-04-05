@@ -4,6 +4,7 @@ import FontSizeSlider from './form/FontSizeSlider';
 import Theme from './form/Theme';
 import AspectRatio from './form/AspectRatio';
 import QuotationMarks from './form/QuotationMarks';
+import Branding from './form/Branding';
 
 class Form extends React.Component {
   constructor (props) {
@@ -15,6 +16,7 @@ class Form extends React.Component {
       aspectRatio: 'sixteen-by-nine',
       quotes: true,
       attribution: '',
+      branding: true,
     };
 
     this.onFontSizeChange = this.onFontSizeChange.bind(this);
@@ -22,6 +24,7 @@ class Form extends React.Component {
     this.onAspectRatioClick = this.onAspectRatioClick.bind(this);
     this.onQuoteButtonClick = this.onQuoteButtonClick.bind(this);
     this.onAttributionChange = this.onAttributionChange.bind(this);
+    this.onBrandingButtonClick = this.onBrandingButtonClick.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.saveImage = this.saveImage.bind(this);
   }
@@ -48,6 +51,11 @@ class Form extends React.Component {
 
   onAttributionChange (e) {
     this.setState({ attribution: e.target.value, });
+    this.sendUpstream();
+  }
+
+  onBrandingButtonClick (e) {
+    this.setState({ branding: e.target.id === 'show', });
     this.sendUpstream();
   }
 
@@ -133,6 +141,10 @@ class Form extends React.Component {
               <QuotationMarks
                 value={this.state.quotes}
                 onChange={this.onQuoteButtonClick}
+              />
+              <Branding
+                value={this.state.branding}
+                onChange={this.onBrandingButtonClick}
               />
               <div className='form-group'>
                 <button

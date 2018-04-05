@@ -19,6 +19,13 @@ const AspectRatio = (props) => {
         >
           Square <i className='icon icon-instagram' />
         </button>
+        <button
+          id='nine-by-sixteen'
+          className={`btn btn-primary ${props.value === 'nine-by-sixteen' ? 'active' : null}`}
+          onClick={props.onChange}
+        >
+          9:16 <i className='icon icon-instagram' />
+        </button>
       </div>
     </div>
   );

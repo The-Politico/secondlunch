@@ -115,9 +115,11 @@ class Poster extends React.Component {
             styles={assign({}, theme.attributionStyles, theme.sourceStyles, { opacity: 0.6, })}
             menuRef={this.menuRef}
           />
-          <div className='logo-wrapper' style={theme.brandStyles}>
-            <Brand />
-          </div>
+          {this.props.branding ? (
+            <div className='logo-wrapper' style={theme.brandStyles}>
+              <Brand />
+            </div>
+          ) : null}
         </div>
       </div>
     );

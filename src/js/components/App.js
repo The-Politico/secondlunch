@@ -10,8 +10,9 @@ class App extends React.Component {
       fontSize: 40,
       theme: 'POLITICO Red',
       aspectRatio: 'sixteen-by-nine',
-      quotes: 'true',
+      quotes: true,
       attribution: '',
+      branding: true,
     };
 
     this.updateState = this.updateState.bind(this);
@@ -30,6 +31,7 @@ class App extends React.Component {
           aspectRatio={this.state.aspectRatio}
           quotes={this.state.quotes}
           attribution={this.state.attribution}
+          branding={this.state.branding}
         />
         <Form upstream={this.updateState} />
       </div>

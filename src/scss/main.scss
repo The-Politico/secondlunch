@@ -249,6 +249,10 @@ canvas {
         font-size: $base-font-size * 1.1;
     }
   }
+
+  &.nine-by-sixteen {
+    height: 1138px;
+  }
 }
 
 
