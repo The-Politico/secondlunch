@@ -5,7 +5,7 @@ const plugins = [
     trigger: /(")/,
     before: /\s$/,
     transform: (transform, event, matches) => {
-      return transform.insertText('“'); // smart double quote (left)
+      return transform.insertText('\u201c'); // smart double quote (left)
     },
   }),
   AutoReplace({

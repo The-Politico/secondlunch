@@ -13,6 +13,7 @@ class App extends React.Component {
       quotes: true,
       attribution: '',
       branding: true,
+      alignment: 'left',
     };
 
     this.updateState = this.updateState.bind(this);
@@ -32,6 +33,7 @@ class App extends React.Component {
           quotes={this.state.quotes}
           attribution={this.state.attribution}
           branding={this.state.branding}
+          alignment={this.state.alignment}
         />
         <Form upstream={this.updateState} />
       </div>

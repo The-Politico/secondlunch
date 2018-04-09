@@ -137,6 +137,39 @@ canvas {
   overflow: hidden;
   font-feature-settings: "liga" 0;
 
+  &.align-center, &.align-right {
+    &.quote .left-quote {
+      display: none;
+    }
+
+    &.quote blockquote:not(.empty) p:first-child {
+      &:before {
+        content: $quote-begin-symbol;
+      }
+    }
+
+    &:not(.quote) blockquote:not(.empty) p:last-child {
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+
+    span[contenteditable=false] {
+      display: inline !important;
+    }
+  }
+
+  &.align-center {
+    text-align: center;
+  }
+
+  &.align-right {
+    text-align: right;
+  }
+
   &.quote {
     .left-quote {
       content:$quote-begin-symbol;

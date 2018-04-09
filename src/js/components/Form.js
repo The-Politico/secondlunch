@@ -5,6 +5,7 @@ import Theme from './form/Theme';
 import AspectRatio from './form/AspectRatio';
 import QuotationMarks from './form/QuotationMarks';
 import Branding from './form/Branding';
+import TextAlignment from './form/TextAlignment';
 
 class Form extends React.Component {
   constructor (props) {
@@ -17,6 +18,7 @@ class Form extends React.Component {
       quotes: true,
       attribution: '',
       branding: true,
+      alignment: 'left',
     };
 
     this.onFontSizeChange = this.onFontSizeChange.bind(this);
@@ -25,6 +27,7 @@ class Form extends React.Component {
     this.onQuoteButtonClick = this.onQuoteButtonClick.bind(this);
     this.onAttributionChange = this.onAttributionChange.bind(this);
     this.onBrandingButtonClick = this.onBrandingButtonClick.bind(this);
+    this.onTextAlignClick = this.onTextAlignClick.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.saveImage = this.saveImage.bind(this);
   }
@@ -36,6 +39,11 @@ class Form extends React.Component {
 
   onThemeButtonClick ({ value, label, }) {
     this.setState({ theme: value, });
+    this.sendUpstream();
+  }
+
+  onTextAlignClick (e) {
+    this.setState({ alignment: e.target.id });
     this.sendUpstream();
   }
 
@@ -133,6 +141,10 @@ class Form extends React.Component {
               <Theme
                 value={this.state.theme}
                 onChange={this.onThemeButtonClick}
+              />
+              <TextAlignment
+                value={this.state.alignment}
+                onChange={this.onTextAlignClick}
               />
               <AspectRatio
                 value={this.state.aspectRatio}

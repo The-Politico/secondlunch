@@ -89,7 +89,7 @@ class Poster extends React.Component {
     return (
       <div className='poster-wrapper'>
         <div
-          className={`poster ${this.props.aspectRatio} ${this.props.quotes ? 'quote' : ''}`}
+          className={`poster ${this.props.aspectRatio} align-${this.props.alignment} ${this.props.quotes ? 'quote' : ''}`}
           style={posterStyles}
         >
           {this.state.quote.startText.text ? (<span

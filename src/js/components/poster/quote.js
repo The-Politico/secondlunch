@@ -9,6 +9,16 @@ const renderQuote = (props) => {
   );
 };
 
+const onKeyDown = (event, change, editor) => {
+  if (change.value.startText.text.startsWith('"')) {
+    change
+      .selectAll()
+      .moveOffsetsTo(0, 1)
+      .deleteForward(1)
+      .insertText('\u201c');
+  }
+}
+
 const Quote = (props) => {
   let classes = '';
   if (props.value.startText.text.length <= 0) {
@@ -23,6 +33,7 @@ const Quote = (props) => {
         placeholder='Enter quote here'
         plugins={props.plugins}
         renderNode={renderQuote}
+        onKeyDown={onKeyDown}
       />
     </blockquote>
   );
