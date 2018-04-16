@@ -259,6 +259,10 @@ canvas {
     padding:  $padding $padding $padding * 2;
     margin: 0;
     font-size: 28px;
+
+    .icon {
+      -webkit-font-smoothing: antialiased;
+    }
   }
 
   &.sixteen-by-nine {
